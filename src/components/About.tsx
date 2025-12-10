@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: "11+", label: "Months Avg. Retention" },
-  { value: "8", label: "Brands Max" },
+  { value: "Boutique", label: "Agency (Bangalore)" },
   { value: "7/10", label: "Clients See Improved Results" },
 ];
 

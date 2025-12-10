@@ -1,26 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-const brands = [{
-  name: "Birdsong Life",
-  logo: "🦅"
-}, {
-  name: "Shumee Toys",
-  logo: "🧸"
-}, {
-  name: "Proactive For Her",
-  logo: "💪"
-}, {
-  name: "Aroleap",
-  logo: "🎯"
-}, {
-  name: "Ola Krutrim",
-  logo: "🤖"
-}, {
-  name: "B For Bottoms",
-  logo: "👶"
-}, {
-  name: "The Shorts Project",
-  logo: "🩳"
-}];
+const brands = [
+  { name: "Yourstory" },
+  { name: "Ola Krutrim" },
+  { name: "Shumee Toys" },
+  { name: "Birdsonglife" },
+  { name: "Beauty & Co" },
+  { name: "Food Daarze" },
+  { name: "Aroleap" },
+  { name: "Brigade Reap" },
+  { name: "Elevate Now" },
+];
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -59,13 +48,6 @@ const Portfolio = () => {
               <div className="font-medium text-foreground">{brand.name}</div>
             </div>)}
           
-          {/* Placeholder for potential 8th brand */}
-          <div className={`p-8 rounded-2xl border-2 border-dashed border-border flex flex-col items-center justify-center transition-all duration-500 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`} style={{
-          transitionDelay: "700ms"
-        }}>
-            <div className="text-4xl mb-4 text-muted-foreground">+</div>
-            <div className="text-sm text-muted-foreground">Your Brand?</div>
-          </div>
         </div>
       </div>
     </section>;
