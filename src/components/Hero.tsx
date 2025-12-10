@@ -1,18 +1,16 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
-
 const Hero = () => {
   const scrollToPortfolio = () => {
     const element = document.querySelector("#portfolio");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
       
@@ -24,7 +22,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">Boutique Agency • Max 8 Brands</span>
+            <span className="text-sm text-muted-foreground">Boutique Agency • Bangalore</span>
           </div>
 
           {/* Headline */}
@@ -41,22 +39,13 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button 
-              asChild 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg group"
-            >
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg group">
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
                 Book a Free Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={scrollToPortfolio}
-              className="border-border hover:bg-secondary px-8 py-6 text-lg"
-            >
+            <Button variant="outline" size="lg" onClick={scrollToPortfolio} className="border-border hover:bg-secondary px-8 py-6 text-lg">
               See Our Work
             </Button>
           </div>
@@ -67,8 +56,6 @@ const Hero = () => {
           <ChevronDown className="h-8 w-8 text-muted-foreground" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
