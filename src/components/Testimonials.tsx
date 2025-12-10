@@ -1,36 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { Quote, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Testimonials = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+      }
+    }, {
+      threshold: 0.2
+    });
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
-
-  return (
-    <section id="testimonials" ref={sectionRef} className="py-24 lg:py-32">
+  return <section id="testimonials" ref={sectionRef} className="py-24 lg:py-32">
       <div className="container px-4 lg:px-8">
-        <div
-          className={`text-center mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Testimonials
           </span>
@@ -39,11 +28,7 @@ const Testimonials = () => {
           </h2>
         </div>
 
-        <div
-          className={`max-w-4xl mx-auto transition-all duration-700 delay-200 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
+        <div className={`max-w-4xl mx-auto transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           {/* Main testimonial card */}
           <div className="relative p-8 md:p-12 rounded-3xl bg-card border border-border">
             {/* Quote icon */}
@@ -64,11 +49,7 @@ const Testimonials = () => {
             </div>
 
             {/* Quote text */}
-            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">
-              "Working with Beyond Goofy transformed our marketing approach. They didn't just 
-              run ads—they became true partners in our growth. Their honest feedback and 
-              data-driven strategies helped us scale efficiently while maintaining profitability."
-            </blockquote>
+            <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8">"Working with Beyond Goofy transformed our marketing approach. They didn't just run ads they became true partners in our growth. Their honest feedback and data-driven strategies helped us scale efficiently while maintaining CM 3 profitability."</blockquote>
 
             {/* Attribution */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -77,17 +58,8 @@ const Testimonials = () => {
                 <div className="text-muted-foreground">D2C Brand Founder</div>
               </div>
 
-              <Button
-                variant="outline"
-                asChild
-                className="border-border hover:bg-secondary"
-              >
-                <a
-                  href="https://www.linkedin.com/company/beyond-goofy/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2"
-                >
+              <Button variant="outline" asChild className="border-border hover:bg-secondary">
+                <a href="https://www.linkedin.com/company/beyond-goofy/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
                   See More on LinkedIn
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -112,8 +84,6 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Testimonials;
