@@ -75,22 +75,22 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-  return <section id="contact" ref={sectionRef} className="py-24 lg:py-32 bg-secondary/30">
+  return <section id="contact" ref={sectionRef} className="py-16 lg:py-32 bg-secondary/30">
       <div className="container px-4 lg:px-8">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className={`text-center mb-10 lg:mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Get In Touch
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             Let's <span className="text-gradient">Scale Together</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to scale your brand with a Gen-AI powered offshore team? 
             Drop us a message or schedule a strategy call.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <div className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <form onSubmit={handleSubmit} className="space-y-6">
