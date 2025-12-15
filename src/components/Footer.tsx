@@ -31,29 +31,29 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="py-16 border-t border-border">
+    <footer className="py-12 lg:py-16 border-t border-border">
       <div className="container px-4 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-8 lg:mb-12">
           {/* Brand */}
           <div>
-            <a href="#" className="text-2xl font-bold font-display text-foreground">
+            <a href="#" className="text-xl lg:text-2xl font-bold font-display text-foreground">
               Beyond<span className="text-primary">Goofy</span>
             </a>
-            <p className="mt-4 text-muted-foreground max-w-sm">
-              A boutique performance marketing agency that focuses on real results through honest communication and
-              influencer partnerships.
+            <p className="mt-4 text-sm lg:text-base text-muted-foreground max-w-sm">
+              A Gen-AI powered performance marketing agency helping global brands 
+              scale profitably with offshore execution.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold font-display mb-4">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-bold font-display mb-3 lg:mb-4 text-sm lg:text-base">Quick Links</h4>
+            <ul className="space-y-2 lg:space-y-3">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm lg:text-base text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
                   </button>
@@ -64,8 +64,8 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-bold font-display mb-4">Contact</h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <h4 className="font-bold font-display mb-3 lg:mb-4 text-sm lg:text-base">Contact</h4>
+            <ul className="space-y-2 lg:space-y-3 text-sm lg:text-base text-muted-foreground">
               <li>
                 <a href="mailto:santhosh@beyondgoofy.com" className="hover:text-foreground transition-colors">
                   santhosh@beyondgoofy.com
@@ -94,9 +94,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="pt-6 lg:pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 lg:gap-4 text-xs lg:text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Beyond Goofy. All rights reserved.</p>
-          <p>Built with passion for performance marketing.</p>
+          <p>Gen-AI powered performance marketing.</p>
         </div>
       </div>
     </footer>
