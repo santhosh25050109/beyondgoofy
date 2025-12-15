@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,8 +42,18 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // For now, just show a toast - backend integration will be added later
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          company: formData.company.trim() || null,
+          message: formData.message.trim()
+        });
+
+      if (error) throw error;
+
       toast({
         title: "Message sent!",
         description: "We'll get back to you within 24 hours."
@@ -53,8 +64,16 @@ const Contact = () => {
         company: "",
         message: ""
       });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
   return <section id="contact" ref={sectionRef} className="py-24 lg:py-32 bg-secondary/30">
       <div className="container px-4 lg:px-8">
