@@ -22,26 +22,26 @@ const Hero = () => {
           {/* Badge */}
           <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">Boutique Agency • Bangalore</span>
+            <span className="text-sm text-muted-foreground">Gen-AI Native • Global Clients</span>
           </div>
 
           {/* Headline */}
           <h1 className="animate-fade-up-delay-1 text-4xl md:text-5xl lg:text-7xl font-bold font-display leading-tight mb-6">
-            Performance Marketing{" "}
-            <span className="text-gradient">Powered by Influencers</span>
+            Gen-AI Powered{" "}
+            <span className="text-gradient">Performance Marketing Agency</span>
           </h1>
 
           {/* Subheadline */}
           <p className="animate-fade-up-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            We don't do fluff. We focus on real results with honest communication, 
-            working exclusively with brands we believe in.
+            We help US, UK, and UAE brands scale faster using AI-driven performance marketing, 
+            influencer-led content, and a high-impact offshore growth team — at 75% lower cost.
           </p>
 
           {/* CTAs */}
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg group">
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-                Book a Free Strategy Call
+                Book a Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

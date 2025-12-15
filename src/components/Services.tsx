@@ -1,24 +1,38 @@
 import { useEffect, useRef, useState } from "react";
 import { Target, Users, MessageSquare } from "lucide-react";
 
+import { Palette, Globe, ShoppingCart } from "lucide-react";
+
 const services = [
   {
     icon: Target,
     title: "Performance Marketing",
     description:
-      "Data-driven campaigns on Meta & Google that focus on one thing: your bottom line. We optimize for conversions, not vanity metrics.",
+      "Gen-AI assisted campaign structuring, creative testing, and scaling across Meta, Google, LinkedIn & X. AI for insights, humans for strategy.",
   },
   {
     icon: Users,
     title: "Influencer Marketing",
     description:
-      "Strategic partnerships with creators who genuinely connect with your audience. Authentic content that drives real engagement and sales.",
+      "UGC-first influencer programs designed to feed performance ads. Barter & paid collaborations, creator sourcing, and AI-assisted content analysis.",
+  },
+  {
+    icon: Palette,
+    title: "Graphic Designing",
+    description:
+      "High-converting ad creatives built for speed and scale. Static ads, carousels, reels thumbnails with AI-assisted design workflows.",
   },
   {
     icon: MessageSquare,
     title: "Social Media Management",
     description:
-      "Consistent, on-brand content that builds community and keeps your audience engaged. We handle the posting so you can focus on growth.",
+      "Content systems that support performance. Reels strategy, content calendars, AI-assisted captioning, and brand storytelling.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Shopify Development",
+    description:
+      "Conversion-focused Shopify builds. Performance-ready storefronts, landing pages for paid traffic, CRO-backed layouts, and mobile optimization.",
   },
 ];
 
@@ -52,18 +66,18 @@ const Services = () => {
           }`}
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            What We Do
+            Our Services
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-            Services That <span className="text-gradient">Drive Results</span>
+            AI-Powered Solutions for <span className="text-gradient">Global Growth</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything we offer is designed with one goal: growing your business 
-            through honest, effective marketing.
+            Full-stack marketing services powered by Gen-AI workflows and 
+            delivered by senior strategists at offshore rates.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
