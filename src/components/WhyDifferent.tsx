@@ -1,38 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Shield, Clock, Users, TrendingUp, MessageCircle, Heart } from "lucide-react";
-
-const differentiators = [
-  {
-    icon: Users,
-    title: "Only 8 Brands",
-    description: "We limit our roster to ensure every client gets dedicated attention and strategic focus.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Honest Communication",
-    description: "No sugarcoating. We tell you what's working, what's not, and what needs to change.",
-  },
-  {
-    icon: Clock,
-    title: "No Long Contracts",
-    description: "We earn your business every month. No lock-ins, just results that keep you coming back.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Results-Focused",
-    description: "We optimize for what matters: revenue, conversions, and sustainable growth.",
-  },
-  {
-    icon: Shield,
-    title: "Transparent Pricing",
-    description: "No hidden fees or surprise charges. You know exactly what you're paying for.",
-  },
-  {
-    icon: Heart,
-    title: "We Pick Our Clients",
-    description: "We only work with brands we genuinely believe in. Your success is our reputation.",
-  },
-];
+import { DollarSign, Clock, Users, Zap, Globe, TrendingDown } from "lucide-react";
 
 const WhyDifferent = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,35 +31,95 @@ const WhyDifferent = () => {
           }`}
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Why Choose Us
+            Why Offshore With Us
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-            What Makes Us <span className="text-gradient">Different</span>
+            Global Offshore Hiring, <span className="text-gradient">Tailored for Marketing</span>
           </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Inspired by global offshore hiring models, but specifically designed for performance marketing teams.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {differentiators.map((item, index) => (
+        <div className="max-w-5xl mx-auto">
+          {/* Cost Comparison */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* US/UK Pricing */}
             <div
-              key={item.title}
-              className={`group flex gap-4 p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-500 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
+              className={`p-8 rounded-2xl bg-card border border-border transition-all duration-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
+                  <Globe className="w-6 h-6 text-muted-foreground" />
                 </div>
+                <h3 className="text-xl font-bold font-display">US / UK Agency Pricing</h3>
               </div>
-              <div>
-                <h3 className="font-bold font-display mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <DollarSign className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <span>Average monthly retainer: <strong className="text-foreground">$6,000 – $10,000</strong></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <span>Long-term contracts required</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                  <span>Limited flexibility & junior account managers</span>
+                </li>
+              </ul>
             </div>
-          ))}
+
+            {/* Beyond Goofy Pricing */}
+            <div
+              className={`p-8 rounded-2xl bg-card border-2 border-primary transition-all duration-700 delay-150 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold font-display">Beyond Goofy (India-Based)</h3>
+              </div>
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <TrendingDown className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span>Average monthly retainer: <strong className="text-primary">$2,000</strong></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-foreground">No long contracts</strong> — earn your trust monthly</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-foreground">Senior strategists + execution</strong> included</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Results */}
+          <div
+            className={`grid sm:grid-cols-3 gap-6 transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <div className="p-6 rounded-xl bg-primary/10 border border-primary/20 text-center">
+              <div className="text-3xl font-bold font-display text-primary mb-2">75%</div>
+              <p className="text-sm text-muted-foreground">Cost Savings</p>
+            </div>
+            <div className="p-6 rounded-xl bg-primary/10 border border-primary/20 text-center">
+              <div className="text-3xl font-bold font-display text-primary mb-2">Same</div>
+              <p className="text-sm text-muted-foreground">Tools & Performance Standards</p>
+            </div>
+            <div className="p-6 rounded-xl bg-primary/10 border border-primary/20 text-center">
+              <div className="text-3xl font-bold font-display text-primary mb-2">Faster</div>
+              <p className="text-sm text-muted-foreground">Time-zone Advantage</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

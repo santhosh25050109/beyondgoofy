@@ -5,23 +5,23 @@ const steps = [
   {
     icon: Search,
     number: "01",
-    title: "Identify Trends",
+    title: "Insight Discovery",
     description:
-      "We research your market, audience, and competitors to find the opportunities that others miss.",
+      "AI + data to identify winning angles and opportunities. We research your market before spending a dollar.",
   },
   {
     icon: Beaker,
     number: "02",
-    title: "Test Creatives",
+    title: "Creative Testing",
     description:
-      "Rapid testing of ad creatives, messaging, and audiences to find what resonates and converts.",
+      "Influencer-led + in-house content tested aggressively. UGC, static ads, and video — all performance-optimized.",
   },
   {
     icon: Rocket,
     number: "03",
-    title: "Scale Performance",
+    title: "Performance Scaling",
     description:
-      "Once we find winners, we scale aggressively while maintaining efficiency and profitability.",
+      "Budget allocation, ROAS optimization, and constant iteration. We scale what works, cut what doesn't.",
   },
 ];
 
@@ -55,10 +55,10 @@ const Process = () => {
           }`}
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Our Process
+            Our Approach
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-            How We <span className="text-gradient">Deliver Results</span>
+            AI-Powered. Creative-First. <span className="text-gradient">Performance-Driven.</span>
           </h2>
         </div>
 

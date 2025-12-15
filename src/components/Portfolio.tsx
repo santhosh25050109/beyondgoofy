@@ -1,15 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-const brands = [
-  { name: "Yourstory" },
-  { name: "Ola Krutrim" },
-  { name: "Shumee Toys" },
-  { name: "Birdsonglife" },
-  { name: "Beauty & Co" },
-  { name: "Food Daarze" },
-  { name: "Aroleap" },
-  { name: "Brigade Reap" },
-  { name: "Elevate Now" },
+const industries = [
+  { name: "D2C & Ecommerce" },
+  { name: "Healthcare & Wellness" },
+  { name: "Real Estate" },
+  { name: "Fintech" },
+  { name: "EdTech" },
 ];
 
 const Portfolio = () => {
@@ -42,38 +38,38 @@ const Portfolio = () => {
           }`}
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Our Work
+            Industries We Serve
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-            Brands We've <span className="text-gradient">Grown</span>
+            55+ Brands <span className="text-gradient">Scaled Globally</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're proud to partner with innovative brands across various industries.
+            Performance-led strategies across diverse industries worldwide.
           </p>
         </div>
 
         {/* Marquee container */}
         <div className="overflow-hidden">
           <div className="flex animate-marquee">
-            {/* First set of brands */}
-            {brands.map((brand) => (
+            {/* First set of industries */}
+            {industries.map((industry) => (
               <div
-                key={brand.name}
+                key={industry.name}
                 className="flex-shrink-0 mx-4 px-8 py-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300"
               >
                 <div className="font-medium text-foreground whitespace-nowrap">
-                  {brand.name}
+                  {industry.name}
                 </div>
               </div>
             ))}
             {/* Duplicate for seamless loop */}
-            {brands.map((brand) => (
+            {industries.map((industry) => (
               <div
-                key={`${brand.name}-duplicate`}
+                key={`${industry.name}-duplicate`}
                 className="flex-shrink-0 mx-4 px-8 py-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300"
               >
                 <div className="font-medium text-foreground whitespace-nowrap">
-                  {brand.name}
+                  {industry.name}
                 </div>
               </div>
             ))}

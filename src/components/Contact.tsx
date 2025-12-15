@@ -82,11 +82,11 @@ const Contact = () => {
             Get In Touch
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-            Let's <span className="text-gradient">Talk Growth</span>
+            Let's <span className="text-gradient">Scale Together</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to take your marketing to the next level? Drop us a message or schedule 
-            a free strategy call.
+            Ready to scale your brand with a Gen-AI powered offshore team? 
+            Drop us a message or schedule a strategy call.
           </p>
         </div>
 

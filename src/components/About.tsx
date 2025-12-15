@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "11+", label: "Months Avg. Retention" },
-  { value: "Boutique", label: "Agency (Bangalore)" },
-  { value: "7/10", label: "Clients See Improved Results" },
+  { value: "55+", label: "Brands Scaled Globally" },
+  { value: "75%", label: "Cost Savings vs US/UK" },
+  { value: "Gen-AI", label: "Powered Workflows" },
 ];
 
 const About = () => {
@@ -46,8 +46,8 @@ const About = () => {
                 About Us
               </span>
               <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold font-display">
-                A Boutique Agency That{" "}
-                <span className="text-gradient">Actually Cares</span>
+                Built for Modern Brands That{" "}
+                <span className="text-gradient">Care About Results</span>
               </h2>
             </div>
 
@@ -55,17 +55,16 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We're not your typical marketing agency. At Beyond Goofy, we intentionally 
-                  limit ourselves to working with <strong className="text-foreground">only 8 brands at a time</strong>.
+                  Beyond Goofy is a boutique performance marketing agency built for modern brands 
+                  that care about <strong className="text-foreground">efficiency, speed, and results</strong>.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  This means every client gets our full attention, not a junior account manager 
-                  who's juggling 50 other accounts. We believe in quality over quantity, 
-                  honest communication, and results that actually matter.
+                  We blend Gen-AI workflows, creative-first media buying, and offshore execution 
+                  from India to deliver enterprise-level performance at a fraction of global agency costs.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  No long-term contracts. No hidden fees. Just real performance marketing 
-                  backed by the power of authentic influencer partnerships.
+                  No bloated retainers. No long-term lock-ins. We don't just run ads — 
+                  we build <strong className="text-foreground">repeatable growth systems</strong>.
                 </p>
               </div>
 
