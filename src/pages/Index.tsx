@@ -17,7 +17,7 @@ const Index = () => {
         <title>Beyond Goofy | #1 Healthcare Performance Marketing Agency in Bangalore</title>
         <meta
           name="description"
-          content="India's leading healthcare performance marketing agency. We scale healthcare, D2C, protein & fitness brands on Meta & Google — compliantly. Expertise in MTP, IVF, mental health, PCOS, and more."
+          content="India's leading healthcare performance marketing agency. We scale healthcare, D2C, protein & fitness brands on Meta & Google compliantly. Expertise in MTP, IVF, mental health, PCOS, and more."
         />
         <meta
           name="keywords"

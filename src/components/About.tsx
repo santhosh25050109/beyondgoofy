@@ -38,11 +38,11 @@ const About = () => {
               <span className="text-primary text-sm font-medium uppercase tracking-wider">
                 Why We're Different
               </span>
-              <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+              <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
                 We Deeply Understand{" "}
                 <span className="text-gradient">Healthcare Advertising Complexities</span>
               </h2>
-              <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">Most agencies run generic ads. We've spent years mastering the art of scaling sensitive healthcare categories on Meta & Google without getting banned.</p>
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto px-2">Most agencies run generic ads. We've spent years mastering the art of scaling sensitive healthcare categories on Meta & Google without getting banned.</p>
             </div>
 
             {/* Expertise grid */}

@@ -24,11 +24,11 @@ const Contact = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Let's Talk
           </span>
-          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             Ready to Scale Your{" "}
             <span className="text-gradient">Healthcare Brand?</span>
           </h2>
-          <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">Book a free strategy call. No fluff, no sales pitch just honest insights on how we can help you grow.</p>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">Book a free strategy call. No fluff, no sales pitch. Just honest insights on how we can help you grow.</p>
         </div>
 
         <div className="max-w-4xl mx-auto">

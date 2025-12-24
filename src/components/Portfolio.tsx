@@ -49,12 +49,12 @@ const Portfolio = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Healthcare & D2C Clients
           </span>
-          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             Trusted By Leading{" "}
             <span className="text-gradient">Healthcare Brands</span>
           </h2>
-          <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-            From femtech to fertility, mental health to nutrition — we've scaled them all.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+            From femtech to fertility, mental health to nutrition. We've scaled them all.
           </p>
         </div>
 
@@ -97,11 +97,11 @@ const Portfolio = () => {
           <p className="text-center text-muted-foreground mb-6">
             We work with founders who care about ROI, compliance & scale:
           </p>
-          <div className="flex flex-wrap justify-center gap-3 lg:gap-4">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 px-2">
             {targetAudience.map((audience) => (
               <span
                 key={audience}
-                className="px-5 lg:px-6 py-2.5 lg:py-3 rounded-full bg-primary/10 text-primary text-sm lg:text-base font-medium border border-primary/20"
+                className="px-3 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full bg-primary/10 text-primary text-xs sm:text-sm lg:text-base font-medium border border-primary/20"
               >
                 {audience}
               </span>

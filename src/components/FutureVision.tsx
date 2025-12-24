@@ -54,7 +54,7 @@ const FutureVision = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Vision 2026
           </span>
-          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             Where We're{" "}
             <span className="text-gradient">Headed</span>
           </h2>
