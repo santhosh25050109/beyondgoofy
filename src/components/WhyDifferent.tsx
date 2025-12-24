@@ -8,7 +8,7 @@ const differentiators = [
   {
     icon: Shield,
     title: "Compliance Mastery",
-    description: "We know the policies inside-out. No account bans, no disapprovals — just sustainable scaling.",
+    description: "We know the policies inside-out. No account bans, no disapprovals. Just sustainable scaling.",
   },
   {
     icon: Zap,
@@ -18,7 +18,7 @@ const differentiators = [
   {
     icon: Users,
     title: "Operator Mindset",
-    description: "We think like founders, not agencies. Your P&L is our priority — not vanity metrics.",
+    description: "We think like founders, not agencies. Your P&L is our priority, not vanity metrics.",
   },
   {
     icon: TrendingUp,
@@ -59,11 +59,11 @@ const WhyDifferent = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Our Approach
           </span>
-          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             No Buzzwords. No AI Jargon.{" "}
             <span className="text-gradient">Pure Results.</span>
           </h2>
-          <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             We speak the language of outcomes: revenue, ROAS, and compliant scaling.
           </p>
         </div>
@@ -99,11 +99,11 @@ const WhyDifferent = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <p className="text-lg lg:text-xl font-display text-foreground mb-2">
+            <p className="text-base sm:text-lg lg:text-xl font-display text-foreground mb-2">
               "These guys have already solved the problems we're struggling with."
             </p>
-            <p className="text-muted-foreground text-sm">
-              — What our clients say when they find us
+            <p className="text-muted-foreground text-xs sm:text-sm">
+              What our clients say when they find us
             </p>
           </div>
 

@@ -46,11 +46,11 @@ const Expertise = () => {
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
             Restricted Categories We've Scaled
           </span>
-          <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
+          <h2 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold font-display">
             We've Successfully Run Ads For{" "}
             <span className="text-gradient">Sensitive Healthcare Categories</span>
           </h2>
-          <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Categories that get most agencies banned. We've scaled them profitably.
           </p>
         </div>
