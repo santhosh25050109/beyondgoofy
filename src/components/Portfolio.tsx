@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const healthcareClients = [
   { name: "Proactive For Her", category: "Femtech" },
-  { name: "Elevate Now", category: "Mental Health" },
+  { name: "Elevate Now", category: "Weight loss and wellness company" },
   { name: "Food Darzee", category: "Nutrition" },
   { name: "Aroleap", category: "Fitness" },
   { name: "Ferra", category: "Fitness" },
