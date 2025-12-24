@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "system-ui", "sans-serif"],
+        display: ["Outfit", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,6 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        healthcare: "hsl(var(--healthcare))",
+        trust: "hsl(var(--trust))",
+        success: "hsl(var(--success))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -93,12 +96,16 @@ export default {
           to: { opacity: "1", transform: "scale(1)" },
         },
         glow: {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(25 100% 50% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(25 100% 50% / 0.5)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(172 66% 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(172 66% 50% / 0.5)" },
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       animation: {
@@ -110,6 +117,7 @@ export default {
         "scale-in": "scale-in 0.4s ease-out forwards",
         glow: "glow 2s ease-in-out infinite",
         marquee: "marquee 25s linear infinite",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },

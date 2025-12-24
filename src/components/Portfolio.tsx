@@ -1,23 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 
-const brands = [
-  { name: "Shumee", style: "font-bold text-orange-500" },
-  { name: "Proactive for Her", style: "font-light tracking-wide text-indigo-400" },
-  { name: "YourStory", style: "font-black uppercase tracking-tight text-red-500" },
-  { name: "Food Darzee", style: "font-semibold text-yellow-500" },
-  { name: "LearnApp", style: "font-medium text-slate-300" },
-  { name: "One800", style: "font-bold text-emerald-400" },
-  { name: "Birdsong", style: "font-light tracking-widest text-foreground" },
-  { name: "Brigade REAP", style: "font-bold text-amber-500" },
-  { name: "Aroleap", style: "font-semibold text-slate-200" },
+const healthcareClients = [
+  { name: "Proactive For Her", category: "Femtech" },
+  { name: "Elevate Now", category: "Mental Health" },
+  { name: "Food Darzee", category: "Nutrition" },
+  { name: "Aroleap", category: "Fitness" },
+  { name: "Ferra", category: "Healthcare" },
 ];
 
-const industries = [
-  "D2C & Ecommerce",
-  "Healthcare & Wellness",
-  "Real Estate",
-  "Fintech",
-  "EdTech",
+const targetAudience = [
+  "Healthcare Startups",
+  "Clinics",
+  "Femtech Brands",
+  "Mental Health Platforms",
+  "Fertility & IVF Centres",
+  "Protein & Fitness D2C",
 ];
 
 const Portfolio = () => {
@@ -42,66 +39,74 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section id="portfolio" ref={sectionRef} className="py-16 lg:py-32">
+    <section id="portfolio" ref={sectionRef} className="py-20 lg:py-32">
       <div className="container px-4 lg:px-8">
         <div
-          className={`text-center mb-10 lg:mb-16 transition-all duration-700 ${
+          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Brands We've Scaled
+            Healthcare & D2C Clients
           </span>
           <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
-            55+ Brands <span className="text-gradient">Scaled Globally</span>
+            Trusted By Leading{" "}
+            <span className="text-gradient">Healthcare Brands</span>
           </h2>
           <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Performance-led strategies across diverse industries worldwide.
+            From femtech to fertility, mental health to nutrition — we've scaled them all.
           </p>
         </div>
 
-        {/* Brand Marquee */}
-        <div className="overflow-hidden mb-8 lg:mb-12">
+        {/* Client Marquee */}
+        <div className="overflow-hidden mb-12 lg:mb-16">
           <div className="flex animate-marquee">
-            {/* First set of brands */}
-            {brands.map((brand) => (
+            {/* First set of clients */}
+            {healthcareClients.map((client) => (
               <div
-                key={brand.name}
-                className="flex-shrink-0 mx-3 lg:mx-5 px-6 lg:px-10 py-5 lg:py-7 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300 flex items-center justify-center min-w-[140px] lg:min-w-[180px]"
+                key={client.name}
+                className="flex-shrink-0 mx-4 lg:mx-6 px-8 lg:px-12 py-6 lg:py-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300 min-w-[200px] lg:min-w-[260px]"
               >
-                <span className={`text-lg lg:text-xl whitespace-nowrap ${brand.style}`}>
-                  {brand.name}
-                </span>
+                <p className="text-xl lg:text-2xl font-bold font-display text-foreground mb-1">
+                  {client.name}
+                </p>
+                <p className="text-sm text-primary">{client.category}</p>
               </div>
             ))}
             {/* Duplicate for seamless loop */}
-            {brands.map((brand) => (
+            {healthcareClients.map((client) => (
               <div
-                key={`${brand.name}-duplicate`}
-                className="flex-shrink-0 mx-3 lg:mx-5 px-6 lg:px-10 py-5 lg:py-7 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300 flex items-center justify-center min-w-[140px] lg:min-w-[180px]"
+                key={`${client.name}-duplicate`}
+                className="flex-shrink-0 mx-4 lg:mx-6 px-8 lg:px-12 py-6 lg:py-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300 min-w-[200px] lg:min-w-[260px]"
               >
-                <span className={`text-lg lg:text-xl whitespace-nowrap ${brand.style}`}>
-                  {brand.name}
-                </span>
+                <p className="text-xl lg:text-2xl font-bold font-display text-foreground mb-1">
+                  {client.name}
+                </p>
+                <p className="text-sm text-primary">{client.category}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Industries */}
+        {/* Target Audience */}
         <div
-          className={`flex flex-wrap justify-center gap-3 lg:gap-4 transition-all duration-700 delay-300 ${
+          className={`transition-all duration-700 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {industries.map((industry) => (
-            <span
-              key={industry}
-              className="px-4 lg:px-6 py-2 lg:py-3 rounded-full bg-primary/10 text-primary text-sm lg:text-base font-medium"
-            >
-              {industry}
-            </span>
-          ))}
+          <p className="text-center text-muted-foreground mb-6">
+            We work with founders who care about ROI, compliance & scale:
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 lg:gap-4">
+            {targetAudience.map((audience) => (
+              <span
+                key={audience}
+                className="px-5 lg:px-6 py-2.5 lg:py-3 rounded-full bg-primary/10 text-primary text-sm lg:text-base font-medium border border-primary/20"
+              >
+                {audience}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

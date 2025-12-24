@@ -8,8 +8,6 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Process", href: "#process" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -54,12 +52,12 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </button>
             ))}
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
                 Book a Call
               </a>
@@ -83,7 +81,7 @@ const Navbar = () => {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-left px-4 py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-left px-4 py-2 text-muted-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
                 </button>

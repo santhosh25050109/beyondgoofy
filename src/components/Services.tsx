@@ -1,38 +1,21 @@
 import { useEffect, useRef, useState } from "react";
-import { Target, Users, MessageSquare } from "lucide-react";
+import { Target, BarChart3, RefreshCw, LineChart, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-import { Palette, Globe, ShoppingCart } from "lucide-react";
+const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
 
 const services = [
   {
     icon: Target,
     title: "Performance Marketing",
-    description:
-      "Gen-AI assisted campaign structuring, creative testing, and scaling across Meta, Google, LinkedIn & X. AI for insights, humans for strategy.",
+    description: "Meta Ads & Google Ads for healthcare, D2C, and wellness brands. We know the policies, the workarounds, and the scaling strategies.",
+    features: ["Meta Ads", "Google Ads", "Account Structuring", "Policy Compliance"],
   },
   {
-    icon: Users,
-    title: "Influencer Marketing",
-    description:
-      "UGC-first influencer programs designed to feed performance ads. Barter & paid collaborations, creator sourcing, and AI-assisted content analysis.",
-  },
-  {
-    icon: Palette,
-    title: "Graphic Designing",
-    description:
-      "High-converting ad creatives built for speed and scale. Static ads, carousels, reels thumbnails with AI-assisted design workflows.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Social Media Management",
-    description:
-      "Content systems that support performance. Reels strategy, content calendars, AI-assisted captioning, and brand storytelling.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Shopify Development",
-    description:
-      "Conversion-focused Shopify builds. Performance-ready storefronts, landing pages for paid traffic, CRO-backed layouts, and mobile optimization.",
+    icon: RefreshCw,
+    title: "Retention Marketing",
+    description: "Beyond acquisition. We build systems that increase customer lifetime value and reduce churn for sustainable growth.",
+    features: ["CRO", "Funnel Optimization", "LTV Growth", "Email/WhatsApp Flows"],
   },
 ];
 
@@ -58,10 +41,10 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-16 lg:py-32">
+    <section id="services" ref={sectionRef} className="py-20 lg:py-32 bg-secondary/30">
       <div className="container px-4 lg:px-8">
         <div
-          className={`text-center mb-10 lg:mb-16 transition-all duration-700 ${
+          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -69,34 +52,60 @@ const Services = () => {
             Our Services
           </span>
           <h2 className="mt-4 text-2xl md:text-4xl lg:text-5xl font-bold font-display">
-            AI-Powered Solutions for <span className="text-gradient">Global Growth</span>
+            We Do ONLY What{" "}
+            <span className="text-gradient">We're Best At</span>
           </h2>
           <p className="mt-4 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Full-stack marketing services powered by Gen-AI workflows and 
-            delivered by senior strategists at offshore rates.
+            No branding. No social media management. No fluff. Pure growth & revenue.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-6xl mx-auto">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`group p-5 lg:p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 lg:mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 lg:w-7 lg:h-7 text-primary" />
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className={`group p-8 lg:p-10 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-7 h-7 lg:w-8 lg:h-8 text-primary" />
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold font-display mb-4">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {service.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-lg lg:text-xl font-bold font-display mb-3 lg:mb-4">{service.title}</h3>
-              <p className="text-sm lg:text-base text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div
+            className={`text-center transition-all duration-700 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg group glow-primary">
+              <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
+                Talk to Us
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

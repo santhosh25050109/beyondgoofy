@@ -2,87 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beyond Goofy Design System - Dark & Premium with Orange Accents */
+/* Beyond Goofy Design System - Healthcare Premium Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    --background: 210 25% 4%;
+    --foreground: 180 15% 98%;
 
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
+    --card: 210 20% 7%;
+    --card-foreground: 180 15% 98%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 210 20% 7%;
+    --popover-foreground: 180 15% 98%;
 
-    --primary: 25 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 172 66% 50%;
+    --primary-foreground: 210 25% 4%;
 
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 20% 12%;
+    --secondary-foreground: 180 15% 98%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 210 20% 14%;
+    --muted-foreground: 180 10% 60%;
 
-    --accent: 25 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 172 66% 50%;
+    --accent-foreground: 210 25% 4%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 180 15% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 25 100% 50%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 172 66% 50%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 25 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 25 100% 50%;
+    --sidebar-background: 210 25% 4%;
+    --sidebar-foreground: 180 15% 98%;
+    --sidebar-primary: 172 66% 50%;
+    --sidebar-primary-foreground: 210 25% 4%;
+    --sidebar-accent: 210 20% 12%;
+    --sidebar-accent-foreground: 180 15% 98%;
+    --sidebar-border: 210 15% 18%;
+    --sidebar-ring: 172 66% 50%;
+
+    /* Healthcare-specific colors */
+    --healthcare: 172 66% 50%;
+    --healthcare-glow: 172 66% 60%;
+    --trust: 200 80% 55%;
+    --success: 152 76% 45%;
   }
 
   .dark {
-    --background: 0 0% 6%;
-    --foreground: 0 0% 98%;
+    --background: 210 25% 4%;
+    --foreground: 180 15% 98%;
 
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
+    --card: 210 20% 7%;
+    --card-foreground: 180 15% 98%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 210 20% 7%;
+    --popover-foreground: 180 15% 98%;
 
-    --primary: 25 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 172 66% 50%;
+    --primary-foreground: 210 25% 4%;
 
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 20% 12%;
+    --secondary-foreground: 180 15% 98%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 210 20% 14%;
+    --muted-foreground: 180 10% 60%;
 
-    --accent: 25 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 172 66% 50%;
+    --accent-foreground: 210 25% 4%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 180 15% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 25 100% 50%;
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 172 66% 50%;
 
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 25 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 25 100% 50%;
+    --sidebar-background: 210 25% 4%;
+    --sidebar-foreground: 180 15% 98%;
+    --sidebar-primary: 172 66% 50%;
+    --sidebar-primary-foreground: 210 25% 4%;
+    --sidebar-accent: 210 20% 12%;
+    --sidebar-accent-foreground: 180 15% 98%;
+    --sidebar-border: 210 15% 18%;
+    --sidebar-ring: 172 66% 50%;
   }
 }
 
@@ -102,7 +108,11 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-amber-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-cyan-400 to-teal-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent;
   }
 
   .animate-fade-up {
@@ -124,6 +134,19 @@
     animation: fadeUp 0.6s ease-out 0.3s forwards;
     opacity: 0;
   }
+
+  .animate-fade-up-delay-4 {
+    animation: fadeUp 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 30px hsl(172 66% 50% / 0.3), 0 0 60px hsl(172 66% 50% / 0.1);
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(135deg, hsl(172 66% 50%), hsl(200 80% 55%)) 1;
+  }
 }
 
 @keyframes fadeUp {
@@ -135,4 +158,18 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Healthcare badge pulse */
+@keyframes healthcarePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(172 66% 50% / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px hsl(172 66% 50% / 0);
+  }
+}
+
+.healthcare-pulse {
+  animation: healthcarePulse 2s ease-in-out infinite;
 }
