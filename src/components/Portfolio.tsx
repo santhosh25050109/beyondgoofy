@@ -5,7 +5,7 @@ const healthcareClients = [
   { name: "Elevate Now", category: "Mental Health" },
   { name: "Food Darzee", category: "Nutrition" },
   { name: "Aroleap", category: "Fitness" },
-  { name: "Ferra", category: "Healthcare" },
+  { name: "Ferra", category: "Fitness" },
 ];
 
 const targetAudience = [
