@@ -40,7 +40,7 @@ const Hero = () => {
             Performance marketing for healthcare, D2C, protein & fitness brands.
           </p>
           
-          <p className="animate-fade-up-delay-2 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 lg:mb-10 px-2">We don't do branding. We don't do social media. We do revenue & growth  ethically bypassing ad restrictions on Meta & Google.<strong className="text-foreground">revenue & growth</strong> — ethically bypassing ad restrictions on Meta & Google.
+          <p className="animate-fade-up-delay-2 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 lg:mb-10 px-2">We don't do branding. We don't do social media. We do revenue & growth  ethically bypassing ad restrictions on Meta & Google.revenue & growth ethically bypassing ad restrictions on Meta & Google.<strong className="text-foreground">revenue & growth</strong> — ethically bypassing ad restrictions on Meta & Google.
           </p>
 
           {/* Trust indicators */}
