@@ -1,25 +1,29 @@
 import { Linkedin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
-
-const footerLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
-];
-
+const footerLinks = [{
+  label: "About",
+  href: "#about"
+}, {
+  label: "Services",
+  href: "#services"
+}, {
+  label: "Portfolio",
+  href: "#portfolio"
+}, {
+  label: "Contact",
+  href: "#contact"
+}];
 const Footer = () => {
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="py-16 lg:py-20 border-t border-border bg-secondary/20">
+  return <footer className="py-16 lg:py-20 border-t border-border bg-secondary/20">
       <div className="container px-4 lg:px-8">
         {/* Main CTA */}
         <div className="text-center mb-12 lg:mb-16">
@@ -43,26 +47,18 @@ const Footer = () => {
             <a href="#" className="text-xl lg:text-2xl font-bold font-display text-foreground">
               Beyond<span className="text-primary">Goofy</span>
             </a>
-            <p className="mt-4 text-sm lg:text-base text-muted-foreground max-w-sm">
-              India's #1 Healthcare Performance Marketing Agency. 
-              Scaling healthcare, D2C, and fitness brands — compliantly.
-            </p>
+            <p className="mt-4 text-sm lg:text-base text-muted-foreground max-w-sm">India's #1 Healthcare Performance Marketing Agency. Scaling healthcare, D2C, and fitness brands  compliantly.</p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-bold font-display mb-4 text-sm lg:text-base">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => handleNavClick(link.href)}
-                    className="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors"
-                  >
+              {footerLinks.map(link => <li key={link.href}>
+                  <button onClick={() => handleNavClick(link.href)} className="text-sm lg:text-base text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -85,12 +81,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="mt-6 flex gap-4">
-              <a
-                href="https://www.linkedin.com/company/beyond-goofy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
-              >
+              <a href="https://www.linkedin.com/company/beyond-goofy/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -103,8 +94,6 @@ const Footer = () => {
           <p className="text-primary font-medium">Healthcare Performance Marketing Specialists</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

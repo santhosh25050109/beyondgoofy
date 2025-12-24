@@ -1,18 +1,16 @@
 import { ArrowRight, ChevronDown, Shield, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
-
 const Hero = () => {
   const scrollToPortfolio = () => {
     const element = document.querySelector("#portfolio");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
       
@@ -42,8 +40,7 @@ const Hero = () => {
             Performance marketing for healthcare, D2C, protein & fitness brands.
           </p>
           
-          <p className="animate-fade-up-delay-2 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 lg:mb-10 px-2">
-            We don't do branding. We don't do social media. We do <strong className="text-foreground">revenue & growth</strong> — ethically bypassing ad restrictions on Meta & Google.
+          <p className="animate-fade-up-delay-2 text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 lg:mb-10 px-2">We don't do branding. We don't do social media. We do revenue & growth  ethically bypassing ad restrictions on Meta & Google.<strong className="text-foreground">revenue & growth</strong> — ethically bypassing ad restrictions on Meta & Google.
           </p>
 
           {/* Trust indicators */}
@@ -77,8 +74,6 @@ const Hero = () => {
           <ChevronDown className="h-8 w-8 text-muted-foreground" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
