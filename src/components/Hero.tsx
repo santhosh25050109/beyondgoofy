@@ -1,5 +1,6 @@
 import { ArrowRight, ChevronDown, Shield, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DownloadBrochureButton from "@/components/DownloadBrochureButton";
 
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
 
@@ -71,6 +72,11 @@ const Hero = () => {
             <Button variant="outline" size="lg" onClick={scrollToPortfolio} className="w-full sm:w-auto border-border hover:border-primary hover:bg-primary/5 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg">
               See Our Work
             </Button>
+          </div>
+
+          {/* Download Brochure */}
+          <div className="animate-fade-up-delay-4 mt-4 sm:mt-6">
+            <DownloadBrochureButton />
           </div>
         </div>
 
