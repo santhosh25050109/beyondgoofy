@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 const healthcareCategories = [
   "MTP",
-  "Weight Loss",
+  "Weight Loss/ GLP-1",
   "Gynaecology",
   "Vaginismus",
   "Mental Health",
