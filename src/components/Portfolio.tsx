@@ -62,8 +62,8 @@ const Portfolio = () => {
         </div>
 
         {/* Client Marquee */}
-        <div className="overflow-hidden mb-12 lg:mb-16">
-          <div className="flex animate-marquee">
+        <div className="overflow-hidden mb-12 lg:mb-16 group/marquee">
+          <div className="flex w-max animate-marquee group-hover/marquee:[animation-play-state:paused]">
             {/* First set of clients */}
             {healthcareClients.map((client) => (
               <div
@@ -80,6 +80,7 @@ const Portfolio = () => {
             {healthcareClients.map((client) => (
               <div
                 key={`${client.name}-duplicate`}
+                aria-hidden="true"
                 className="flex-shrink-0 mx-4 lg:mx-6 px-8 lg:px-12 py-6 lg:py-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors duration-300 min-w-[200px] lg:min-w-[260px]"
               >
                 <p className="text-xl lg:text-2xl font-bold font-display text-foreground mb-1">

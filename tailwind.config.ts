@@ -116,7 +116,7 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "scale-in": "scale-in 0.4s ease-out forwards",
         glow: "glow 2s ease-in-out infinite",
-        marquee: "marquee 25s linear infinite",
+        marquee: "marquee 40s linear infinite",
         float: "float 3s ease-in-out infinite",
       },
     },
