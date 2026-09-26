@@ -7,6 +7,8 @@ const healthcareClients = [
   { name: "Food Darzee", category: "Protein" },
   { name: "Aroleap", category: "Fitness" },
   { name: "Ferra", category: "Fitness" },
+  { name: "Lean Protocol", category: "GLP-1 Guided Fat Loss" },
+  { name: "AltRx", category: "Personalized GLP-1 Care - US Region" },
 ];
 
 const targetAudience = [
