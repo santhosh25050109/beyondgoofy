@@ -9,6 +9,7 @@ const healthcareClients = [
   { name: "Ferra", category: "Fitness" },
   { name: "Lean Protocol", category: "GLP-1 Guided Fat Loss" },
   { name: "AltRx", category: "Personalized GLP-1 Care - US Region" },
+  { name: "Only Generic", category: "Branded Substitute for Generic Medicines" },
 ];
 
 const targetAudience = [
