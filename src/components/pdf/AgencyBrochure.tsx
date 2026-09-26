@@ -384,11 +384,11 @@ const AgencyBrochure = () => (
         </Text>
         <View style={styles.statsRow}>
           <View style={styles.statItem}>
-            <Text style={styles.statValue}>₹1.5+ Cr</Text>
+            <Text style={styles.statValue}>₹5+ Cr</Text>
             <Text style={styles.statLabel}>Monthly Ad Spend</Text>
           </View>
           <View style={styles.statItem}>
-            <Text style={styles.statValue}>₹5 Cr+</Text>
+            <Text style={styles.statValue}>₹15 Cr+</Text>
             <Text style={styles.statLabel}>Monthly Revenue Generated</Text>
           </View>
         </View>

@@ -53,11 +53,11 @@ const Hero = () => {
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <span className="text-xs sm:text-sm lg:text-base text-muted-foreground">₹1.5+ Cr Monthly Ad Spend</span>
+              <span className="text-xs sm:text-sm lg:text-base text-muted-foreground">₹5+ Cr Monthly Ad Spend</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-              <span className="text-xs sm:text-sm lg:text-base text-muted-foreground">₹5 Cr+ Monthly Revenue Generated</span>
+              <span className="text-xs sm:text-sm lg:text-base text-muted-foreground">₹15 Cr+ Monthly Revenue Generated</span>
             </div>
           </div>
 

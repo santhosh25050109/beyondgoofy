@@ -76,11 +76,11 @@ const About = () => {
                 <div className="flex items-center">
                   <div className="grid grid-cols-2 gap-4 w-full">
                     <div className="p-4 lg:p-6 rounded-xl bg-primary/10 border border-primary/20 text-center">
-                      <div className="text-2xl lg:text-4xl font-bold text-primary font-display">₹1.5+ Cr</div>
+                      <div className="text-2xl lg:text-4xl font-bold text-primary font-display">₹5+ Cr</div>
                       <p className="text-xs lg:text-sm text-muted-foreground mt-1">Monthly Ad Spend</p>
                     </div>
                     <div className="p-4 lg:p-6 rounded-xl bg-primary/10 border border-primary/20 text-center">
-                      <div className="text-2xl lg:text-4xl font-bold text-primary font-display">₹5+ Cr</div>
+                      <div className="text-2xl lg:text-4xl font-bold text-primary font-display">₹15+ Cr</div>
                       <p className="text-xs lg:text-sm text-muted-foreground mt-1">Monthly Revenue</p>
                     </div>
                     <div className="p-4 lg:p-6 rounded-xl bg-primary/10 border border-primary/20 text-center col-span-2">
