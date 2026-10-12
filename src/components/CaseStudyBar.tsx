@@ -45,7 +45,7 @@ const CaseStudyBar = () => {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pointer-events-none">
-      <div className="mx-auto max-w-3xl pointer-events-auto animate-slide-up">
+      <div className="mx-auto max-w-2xl pointer-events-auto animate-slide-up">
         <div className="flex items-center gap-2 sm:gap-3 rounded-2xl border border-primary/25 bg-card/95 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 shadow-lg shadow-primary/10">
           <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
 
@@ -55,9 +55,14 @@ const CaseStudyBar = () => {
             rel="noopener noreferrer"
             className="group min-w-0 flex-1 flex items-center gap-1.5"
           >
-            <span className="min-w-0 truncate text-xs sm:text-sm text-muted-foreground">
-              Case study:{" "}
-              <strong className="text-foreground">0 to ₹6 Cr/month revenue at 8+ ROAS</strong>
+            <span className="min-w-0 truncate text-xs sm:text-sm text-muted-foreground whitespace-nowrap">
+              <span className="sm:hidden">
+                <strong className="text-foreground">0 to ₹6 Cr/month at 8+ ROAS</strong>
+              </span>
+              <span className="hidden sm:inline">
+                Case study:{" "}
+                <strong className="text-foreground">0 to ₹6 Cr/month revenue at 8+ ROAS</strong>
+              </span>
             </span>
             <ArrowRight className="w-3.5 h-3.5 text-primary flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
           </a>
