@@ -9,6 +9,7 @@ import WhyDifferent from "@/components/WhyDifferent";
 import FutureVision from "@/components/FutureVision";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CaseStudyBar from "@/components/CaseStudyBar";
 
 const Index = () => {
   return (
@@ -41,6 +42,7 @@ const Index = () => {
         <FutureVision />
         <Contact />
         <Footer />
+        <CaseStudyBar />
       </main>
     </>
   );

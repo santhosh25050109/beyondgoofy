@@ -95,6 +95,10 @@ export default {
           from: { opacity: "0", transform: "scale(0.95)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        "slide-up": {
+          from: { opacity: "0", transform: "translateY(16px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
         glow: {
           "0%, 100%": { boxShadow: "0 0 20px hsl(172 66% 50% / 0.3)" },
           "50%": { boxShadow: "0 0 40px hsl(172 66% 50% / 0.5)" },
@@ -115,6 +119,7 @@ export default {
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "scale-in": "scale-in 0.4s ease-out forwards",
+        "slide-up": "slide-up 0.4s ease-out forwards",
         glow: "glow 2s ease-in-out infinite",
         marquee: "marquee 40s linear infinite",
         float: "float 3s ease-in-out infinite",
