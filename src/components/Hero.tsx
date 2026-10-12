@@ -76,7 +76,7 @@ const Hero = () => {
           {/* Case Study */}
           <div className="animate-fade-up-delay-4 mt-6 sm:mt-8 flex justify-center">
             <a
-              href="https://claude.ai/artifact/SAez8GPM1T5WDLfdfgT6AW#slide-c5b70a54fbbd"
+              href="https://claude.ai/artifact/SAez8GPM1T5WDLfdfgT6AW"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3 sm:py-3.5 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors max-w-full"

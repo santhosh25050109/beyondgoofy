@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, PlayCircle, X } from "lucide-react";
 
-const CASE_STUDY_LINK = "https://claude.ai/artifact/SAez8GPM1T5WDLfdfgT6AW#slide-c5b70a54fbbd";
+const CASE_STUDY_LINK = "https://claude.ai/artifact/SAez8GPM1T5WDLfdfgT6AW";
 const DISMISS_KEY = "bg-casestudy-bar-dismissed";
 
 const CaseStudyBar = () => {
