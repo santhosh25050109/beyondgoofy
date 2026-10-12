@@ -12,6 +12,9 @@ const healthcareCategories = [
   "HPV & Cervical Cancer",
   "Egg Freezing",
   "IVF & Fertility",
+  "Pilates",
+  "Gummies",
+  "Prescription Medicines",
 ];
 
 const Expertise = () => {
