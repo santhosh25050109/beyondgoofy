@@ -1,6 +1,5 @@
-import { ArrowRight, ChevronDown, Shield, TrendingUp } from "lucide-react";
+import { ArrowRight, ChevronDown, PlayCircle, Shield, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import DownloadBrochureButton from "@/components/DownloadBrochureButton";
 
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
 
@@ -74,9 +73,21 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Download Brochure */}
-          <div className="animate-fade-up-delay-4 mt-4 sm:mt-6">
-            <DownloadBrochureButton />
+          {/* Case Study */}
+          <div className="animate-fade-up-delay-4 mt-6 sm:mt-8 flex justify-center">
+            <a
+              href="https://claude.ai/artifact/SAez8GPM1T5WDLfdfgT6AW#slide-c5b70a54fbbd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-3 sm:py-3.5 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors max-w-full"
+            >
+              <PlayCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+              <span className="text-xs sm:text-sm lg:text-base text-muted-foreground text-left">
+                A case worth having a look:{" "}
+                <strong className="text-foreground">0 to ₹6 Cr/month revenue at 8+ ROAS</strong>. Real numbers, real scale.
+              </span>
+              <ArrowRight className="w-4 h-4 text-primary flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
 
