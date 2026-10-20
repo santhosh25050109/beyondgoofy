@@ -82,7 +82,6 @@ const TermsOfService = () => {
           content="The terms that govern the use of the Beyond Goofy website and services."
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="/terms-of-service" />
       </Helmet>
 
       <main className="min-h-screen">

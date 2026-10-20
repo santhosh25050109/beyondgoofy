@@ -78,7 +78,6 @@ const PrivacyPolicy = () => {
           content="How Beyond Goofy collects, uses, and protects your personal information."
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="/privacy-policy" />
       </Helmet>
 
       <main className="min-h-screen">
