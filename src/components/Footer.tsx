@@ -1,4 +1,5 @@
 import { Linkedin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const CALENDLY_LINK = "https://calendly.com/santhosh-chidambaram/performance-marketing-discovery-call";
@@ -101,6 +102,20 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-6 sm:pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Beyond Goofy. All rights reserved.</p>
+          <div className="flex items-center gap-4 sm:gap-6">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="hover:text-primary transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
           <p className="text-primary font-medium">Healthcare Performance Marketing Specialists</p>
         </div>
       </div>
